@@ -86,9 +86,13 @@ Task:
 */
 let name2 = "Abdulwahed";
 let result = {
-   firsChar = name2.charAt(0),
-   lengthOfName = name2.length(name2),
+   firsChar : name2.charAt(0),
+   lengthOfName : name2.length(name2),
 }
+console.log(result.firsChar, result.lengthOfName);
+
+
+
 
 
 
@@ -108,8 +112,7 @@ let day = currentDate.getDate();
 
 let month = currentDate.getMonth();
 let year = currentDate.getFullYear();
-console.log(`Today is ${day}/${month+1}/${year}`); 
- 
+console.log(day, month + 1, year); 
 
  
 
@@ -126,7 +129,7 @@ Task:
 let numbers = [3, 5, 1, 8, 2, 7, 4, 10, 6, 9];
 let min = Math.min(...numbers);
 let max = Math.max(...numbers);
-console.log(`Min: ${min}, Max: ${max}`);
+console.log(min,  max);
 
 
 // ===================================================================
@@ -139,6 +142,27 @@ Task:
 3) Handle the error using try { ... } catch (e) { ... } finally { ... } and log messages
    in each block so you can see the flow of control.
 */
+function findMax(arr) {
+   if (arr.length === 0) {
+     throw new Error("Array is empty");
+   }
+   return Math.max(...arr);
+ }
+ 
+ try {
+   let emptyArray = [];
+   console.log(findMax(emptyArray));
+ } catch (e) {
+   console.log("Error:", e.message);
+ } finally {
+   console.log("Done!");
+ }
+
+
+
+
+         
+
 
 // ===================================================================================
 // TODO-7: REGEX + forEach — find words containing 'ab' and log matches from the list
@@ -151,5 +175,14 @@ Given: const words = ["ban", "babble", "make", "flab"];
 3) For matches, log "<word> matches!".
 4) Display the words that matches the pattern.
 */
+const words = ["ban", "babble", "make", "flab"];
+const pattern = /ab/;
+words.forEach(word => {
+   if (pattern.test(word)) {
+       console.log(word);
+   }
+});
+
+
 
 // End of Advance JavaScript Lab — good luck!

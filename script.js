@@ -22,6 +22,25 @@ Task:
 4) Create an instance/object and output its attributes using the getter(s).
 */
 
+let Student = {
+   firstName = "Adulwahed", 
+   lastname = "Adi", 
+   GPA = 3.227,
+
+   getfulname(){
+      return this.firstName+" " + this.lastname;
+   }
+   get GPA(){
+      return this.GPA;
+   }
+}
+
+
+
+
+
+
+
 // ====================================
 // TODO-2: OBJECT AS MAP + for...in LOOP
 // ====================================

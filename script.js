@@ -60,6 +60,20 @@ Task:
 1) Make an object used as a "map" (key → value), e.g., course codes → titles.
 2) Iterate over it with for...in and display each key and value.
 */
+let course = {
+   ICS343 : "Network", 
+   ICS253 : "dicreat math",
+
+}; 
+for (let i in course){
+   console.log(course[i])
+   
+}
+
+
+
+
+
 
 // =========================================
 // TODO-3: STRING OBJECT — charAt() & length

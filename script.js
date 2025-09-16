@@ -84,6 +84,15 @@ Task:
 1) Create a String object or plain string.
 2) Use .charAt(index) and .length to output characters and size.
 */
+let name2 = "Abdulwahed";
+let result = {
+   firsChar = name2.charAt(0),
+   lengthOfName = name2.length(name2),
+}
+
+
+
+
 
 // ===================================
 // TODO-4: DATE — day, month, and year
@@ -94,6 +103,15 @@ Task:
 2) Find and display the current day of month, month (0–11), and year.
 //    (Hint: getDate(), getMonth(), getFullYear() )
 */
+let currentDate = new Date();
+let day = currentDate.getDate();
+
+let month = currentDate.getMonth();
+let year = currentDate.getFullYear();
+console.log(`Today is ${day}/${month+1}/${year}`); 
+ 
+
+ 
 
 // ============================================================
 // TODO-5: ARRAY + SPREAD — find MIN and MAX from 10 numbers
@@ -104,6 +122,12 @@ Task:
 2) Use spread syntax with Math.min(...) and Math.max(...) to find extremes.
 3) Display both values.
 */
+
+let numbers = [3, 5, 1, 8, 2, 7, 4, 10, 6, 9];
+let min = Math.min(...numbers);
+let max = Math.max(...numbers);
+console.log(`Min: ${min}, Max: ${max}`);
+
 
 // ===================================================================
 // TODO-6: EXCEPTIONS — try/catch/finally with EMPTY ARRAY edge case

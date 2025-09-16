@@ -62,13 +62,14 @@ Task:
 */
 let course = {
    ICS343 : "Network", 
-   ICS253 : "dicreat math",
+   ICS253 : "discrete math",
 
 }; 
 for (let i in course){
    console.log(course[i])
-   
+
 }
+
 
 
 

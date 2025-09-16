@@ -23,17 +23,28 @@ Task:
 */
 
 let Student = {
-   firstName = "Adulwahed", 
-   lastname = "Adi", 
-   GPA = 3.227,
+   firstName: "Adulwahed", 
+   lastName: "Adi", 
+   gpaValue: 3.227,
 
-   getfulname(){
-      return this.firstName+" " + this.lastname;
+   set gpa(newGpa) {
+      if (newGpa >= 0.0 && newGpa <= 4.0) {
+          this.gpaValue = newGpa;
+      } else {
+          console.log("Invalid GPA. Must be between 0.0 and 4.0.");
+      }
+  },
+
+   get fullName(){
+      return this.firstName+" " + this.lastName;
+   },
+
+   get gpa() {
+      return this.gpaValue;
    }
-   get GPA(){
-      return this.GPA;
-   }
-}
+
+
+}; 
 
 
 
